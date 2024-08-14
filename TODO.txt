@@ -1,0 +1,10 @@
+1、路由
+  懒加载
+  动态+静态路由
+
+2、jsconfig.json
+  跳转定义失败
+
+3、element-plus 自动加载icons
+
+4、配置vite插件
