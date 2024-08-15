@@ -1,3 +1,26 @@
 {
-  "recommendations": ["Vue.volar"]
+  "recommendations": [
+    "akamud.vscode-theme-onedark",
+    "formulahendry.auto-close-tag",
+    "steoates.autoimport",
+    "formulahendry.auto-rename-tag",
+    "ms-ceintl.vscode-language-pack-zh-hans",
+    "streetsidesoftware.code-spell-checker",
+    "bierner.color-info",
+    "pucelle.vscode-css-navigation",
+    "pranaygp.vscode-css-peek",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "mkxml.vscode-filesize",
+    "donjayamanne.githistory",
+    "htmlhint.vscode-htmlhint",
+    "antfu.iconify",
+    "esbenp.prettier-vscode",
+    "syler.sass-indented",
+    "stylelint.vscode-stylelint",
+    "wayou.vscode-todo-highlight",
+    "antfu.vite",
+    "chakrounanas.turbo-console-log",
+    "hollowtree.vue-snippets"
+  ]
 }

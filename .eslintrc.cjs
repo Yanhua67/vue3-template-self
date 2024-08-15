@@ -41,7 +41,9 @@ module.exports = {
     "no-restricted-syntax": 0,
     "no-nested-ternary": 0,
     "no-empty": 0,
-    "consistent-return": 0
+    "consistent-return": 0,
+    "prefer-promise-reject-errors": 0,
+    "import/no-cycle": 0
   },
   settings: {
     "import/resolver": {
