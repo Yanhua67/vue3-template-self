@@ -6,9 +6,12 @@ import ElementPlus from "element-plus"
 import "@/styles/reset.scss"
 import "@/styles/common.scss"
 import * as ElIcons from "@element-plus/icons-vue"
+import errorHandler from "@/utils/errorHandler"
 import App from "./App.vue"
 
 const app = createApp(App)
+
+app.config.errorHandler = errorHandler
 
 // 全局注册element-plus icon
 Object.keys(ElIcons).forEach(key => {

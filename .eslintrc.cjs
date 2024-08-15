@@ -40,7 +40,8 @@ module.exports = {
     "class-methods-use-this": 0,
     "no-restricted-syntax": 0,
     "no-nested-ternary": 0,
-    "no-empty": 0
+    "no-empty": 0,
+    "consistent-return": 0
   },
   settings: {
     "import/resolver": {
