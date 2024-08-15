@@ -25,6 +25,7 @@ module.exports = {
     confirmCommit: '确认使用以上信息提交？(y/n/e/h)'
   },
   allowCustomScopes: true,
+  // 询问 body 和 footer 的步骤跳过
   skipQuestions: ['body', 'footer'],
   subjectLimit: 72
 }
