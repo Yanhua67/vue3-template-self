@@ -1,4 +1,4 @@
-import { HOME_URL, LOGIN_URL } from "@/config/index"
+import { HOME_URL /* LOGIN_URL */ } from "@/config/index"
 
 /**
  * staticRouter (静态路由)

@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory, createWebHistory } from "vue-router"
 import { useUserStore } from "@/stores/modules/user"
 import { LOGIN_URL, ROUTER_WHITE_LIST } from "@/config/index"
-import { initDynamicRouter } from "@/routers/modules/dynamicRouter"
+// import { initDynamicRouter } from "@/routers/modules/dynamicRouter"
 import { staticRouter, errorRouter } from "@/routers/modules/staticRouter"
 import NProgress from "@/config/nprogress"
 import { useAuthStore } from "@/stores/modules/auth"
@@ -41,7 +41,7 @@ const router = createRouter({
  * */
 router.beforeEach(async (to, from, next) => {
   const userStore = useUserStore()
-  const authStore = useAuthStore()
+  // const authStore = useAuthStore()
 
   // 0、设置token（模拟具有token）
   userStore.setToken("I am token")

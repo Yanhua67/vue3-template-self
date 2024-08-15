@@ -10,7 +10,7 @@ module.exports = {
   },
   extends: [
     // 检测通过AutoImports自动引入的Eslint配置
-    // './.eslintrc-auto-import.json',
+    "./.eslintrc-auto-import.json",
     "airbnb-base",
     "plugin:vue/vue3-recommended",
     "plugin:prettier/recommended",

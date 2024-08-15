@@ -8,6 +8,7 @@ import vueJsx from "@vitejs/plugin-vue-jsx"
 import eslintPlugin from "vite-plugin-eslint"
 import viteCompression from "vite-plugin-compression"
 import NextDevTools from "vite-plugin-vue-devtools"
+import AutoImport from "unplugin-auto-import/vite"
 
 /**
  * 创建 vite 插件
@@ -19,10 +20,22 @@ export const createVitePlugins = viteEnv => {
     vue(),
     // vue 可以使用 jsx/tsx 语法
     vueJsx(),
+    // 自动导入
+    AutoImport({
+      dts: false,
+      imports: ["vue", "@vueuse/core"],
+      // 解决eslint报错问题
+      eslintrc: {
+        enabled: true, // Default `false`
+        filepath: "./.eslintrc-auto-import.json",
+        // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable'),
+        globalsPropValue: true
+      }
+    }),
     // devTools
     VITE_DEVTOOLS && NextDevTools({ launchEditor: "code" }),
     // esLint 报错信息显示在浏览器界面上
-    // eslintPlugin(),
+    eslintPlugin(),
     // 创建打包压缩配置
     createCompression(viteEnv),
     // 注入变量到 html 文件
