@@ -8,3 +8,5 @@
 3、element-plus 自动加载icons
 
 4、配置vite插件
+
+5、没有自动格式化cjs文件？
