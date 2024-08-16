@@ -17,6 +17,7 @@ export default defineConfig(({ mode }) => {
   const root = process.cwd()
   const env = loadEnv(mode, root)
   const viteEnv = wrapperEnv(env)
+  const cesiumBaseUrl = viteEnv.VITE_CESIUM_BASE_URL
 
   return {
     base: viteEnv.VITE_PUBLIC_PATH,
@@ -28,7 +29,8 @@ export default defineConfig(({ mode }) => {
       }
     },
     define: {
-      APP_INFO: JSON.stringify(APP_INFO)
+      APP_INFO: JSON.stringify(APP_INFO),
+      CESIUM_BASE_URL: JSON.stringify(`/${cesiumBaseUrl}`)
     },
     css: {
       preprocessorOptions: {

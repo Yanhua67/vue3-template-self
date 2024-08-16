@@ -43,7 +43,10 @@ module.exports = {
     "no-empty": 0,
     "consistent-return": 0,
     "prefer-promise-reject-errors": 0,
-    "import/no-cycle": 0
+    "import/no-cycle": 0,
+    camelcase: 0,
+    "no-restricted-exports": 0,
+    "no-continue": 0
   },
   settings: {
     "import/resolver": {

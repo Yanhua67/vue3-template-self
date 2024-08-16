@@ -1,0 +1,14 @@
+{
+  "version": 8,
+  "name": "OpenInfraMap",
+  "sources": {
+    "openinframap": {
+      "type": "vector",
+      "url": "http://172.16.137.92:8082/capabilities/openinframap.json"
+    }
+  },
+  "sprite": "http://172.16.137.92:8080/openMap/static/sprite",
+  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=t3I2IkwWwFsoUtCvgLJV",
+  "layers": [],
+  "id": "openinframap"
+}

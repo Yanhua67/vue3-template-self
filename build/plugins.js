@@ -9,17 +9,30 @@ import eslintPlugin from "vite-plugin-eslint"
 import viteCompression from "vite-plugin-compression"
 import NextDevTools from "vite-plugin-vue-devtools"
 import AutoImport from "unplugin-auto-import/vite"
+import { viteStaticCopy } from "vite-plugin-static-copy"
 
 /**
  * 创建 vite 插件
  * @param viteEnv
  */
 export const createVitePlugins = viteEnv => {
-  const { VITE_GLOB_APP_TITLE, VITE_REPORT, VITE_DEVTOOLS, VITE_PWA } = viteEnv
+  const { VITE_GLOB_APP_TITLE, VITE_REPORT, VITE_DEVTOOLS, VITE_PWA, VITE_CESIUM_BASE_URL } = viteEnv
+  const cesiumSource = "node_modules/cesium/Build/Cesium"
+  const cesiumBaseUrl = VITE_CESIUM_BASE_URL
+
   return [
     vue(),
     // vue 可以使用 jsx/tsx 语法
     vueJsx(),
+    // 导入cesium
+    viteStaticCopy({
+      targets: [
+        { src: `${cesiumSource}/ThirdParty`, dest: cesiumBaseUrl },
+        { src: `${cesiumSource}/Workers`, dest: cesiumBaseUrl },
+        { src: `${cesiumSource}/Assets`, dest: cesiumBaseUrl },
+        { src: `${cesiumSource}/Widgets`, dest: cesiumBaseUrl }
+      ]
+    }),
     // 自动导入
     AutoImport({
       dts: false,

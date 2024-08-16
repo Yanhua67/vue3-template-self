@@ -8,6 +8,7 @@ import "@/styles/common.scss"
 import * as ElIcons from "@element-plus/icons-vue"
 import errorHandler from "@/utils/errorHandler"
 import App from "./App.vue"
+import "cesium/Build/Cesium/Widgets/widgets.css"
 
 const app = createApp(App)
 
