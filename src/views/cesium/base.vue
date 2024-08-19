@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import { Cartesian3, Math as CesiumMath, Terrain, Viewer, createOsmBuildingsAsync } from "cesium"
+import { Cartesian3, Color, Math as CesiumMath, Terrain, Viewer, createOsmBuildingsAsync, CustomDataSource } from "cesium"
 import { onMounted } from "vue"
 
 onMounted(() => {
@@ -25,6 +25,26 @@ onMounted(() => {
   createOsmBuildingsAsync().then(buildingTileset => {
     viewer.scene.primitives.add(buildingTileset)
   })
+
+  const dataSource = new CustomDataSource("sub")
+
+  /* const entityCollection = */
+  dataSource.entities.add({
+    position: Cartesian3.fromDegrees(-75.59777, 40.03883),
+    point: {
+      color: Color.RED,
+      pixelSize: 80
+    }
+  })
+  dataSource.entities.add({
+    position: Cartesian3.fromDegrees(-80.12, 25.46),
+    point: {
+      color: Color.LIME,
+      pixelSize: 32
+    }
+  })
+
+  viewer.dataSources.add(dataSource)
 })
 </script>
 
