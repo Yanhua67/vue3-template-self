@@ -25,6 +25,7 @@
     "@vitejs/plugin-vue-jsx": "^4.0.0",
     "@vueuse/core": "^10.11.1",
     "axios": "^1.7.4",
+    "cesium": "^1.130.1",
     "dayjs": "^1.11.12",
     "echarts": "^5.5.1",
     "element-plus": "^2.8.0",
@@ -38,6 +39,7 @@
     "screenfull": "^6.0.2",
     "sortablejs": "^1.15.2",
     "turf": "^3.0.14",
+    "vite-plugin-cesium": "^1.2.23",
     "vue": "^3.4.35",
     "vue-router": "^4.4.3",
     "vuedraggable": "^2.24.3"

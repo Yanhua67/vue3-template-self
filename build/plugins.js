@@ -5,9 +5,10 @@ import { visualizer } from "rollup-plugin-visualizer"
 import { createSvgIconsPlugin } from "vite-plugin-svg-icons"
 import vue from "@vitejs/plugin-vue"
 import vueJsx from "@vitejs/plugin-vue-jsx"
-import eslintPlugin from "vite-plugin-eslint"
+// import eslintPlugin from "vite-plugin-eslint"
 import viteCompression from "vite-plugin-compression"
 import NextDevTools from "vite-plugin-vue-devtools"
+import cesium from "vite-plugin-cesium"
 
 /**
  * 创建 vite 插件
@@ -19,6 +20,8 @@ export const createVitePlugins = viteEnv => {
     vue(),
     // vue 可以使用 jsx/tsx 语法
     vueJsx(),
+    // cesium
+    cesium(),
     // devTools
     VITE_DEVTOOLS && NextDevTools({ launchEditor: "code" }),
     // esLint 报错信息显示在浏览器界面上

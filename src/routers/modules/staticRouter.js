@@ -22,6 +22,16 @@ export const staticRouter = [
     path: "/axios/index",
     name: "axios",
     component: () => import("@/views/axios/index.vue")
+  },
+  {
+    path: "/cesium/index",
+    name: "cesium",
+    component: () => import("@/views/cesium/index.vue")
+  },
+  {
+    path: "/ol/index",
+    name: "ol",
+    component: () => import("@/views/ol/index.vue")
   }
   // {
   //   path: LOGIN_URL,
